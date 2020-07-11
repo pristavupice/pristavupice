@@ -3,50 +3,12 @@
     id="app"
     class="app">
 
-    <app-header>
-      
-    </app-header>
+    <app-header
+      :user-name="user.username"
+      @changeUserName="user.username = 'new name'"
+    />
 
     <main>
-      <tabs>
-
-          <tab name="description" selected="true">
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum error autem dignissimos nobis illum temporibus 
-              voluptate laboriosam eius consequatur! Labore laborum ducimus, culpa sit neque molestias dignissimos natus 
-              minima sed recusandae ipsa necessitatibus obcaecati vel eligendi voluptatem, provident in non ad saepe veniam 
-              eveniet cumque, fugit unde eaque! Doloribus, iusto?
-            </p>
-          </tab>
-
-          <tab name="list">
-            <ul>
-              <li>Item 1</li>
-              <li>Item 2</li>
-              <li>Item 3</li>
-              <li>Item 4</li>
-              <li>Item 5</li>
-            </ul>
-          </tab>
-
-          <tab name="table">
-            <table>
-              <tr>
-                <th>Name</th>
-                <th>Value</th>
-              </tr>
-              <tr>
-                <td>Cheese</td>
-                <td>Yellow</td>
-              </tr>
-              <tr>
-                <td>Apple</td>
-                <td>Red</td>
-              </tr>
-            </table>
-          </tab>
-        </tabs>
-
       <tab-content></tab-content>
     </main>
 
@@ -60,8 +22,6 @@
   import Header from '@/components/header/Header.vue'
   import Footer from '@/components/footer/Footer.vue'
   import TabContent from '@/components/content/TabContent.vue'
-  import Tabs from '@/components/navigation/Tabs.vue'
-  import Tab from '@/components/navigation/Tab.vue'
 
   export default {
     name: 'App',
@@ -69,15 +29,20 @@
       'app-header' : Header,
       'app-footer' : Footer,
       'tab-content' : TabContent,
-      'tab' : Tab,
-      'tabs' : Tabs
+    },
+    data () {
+      return {
+        user: {
+          username: "Dave"
+        }
+      }
     }
   }
 </script>
 
 <style>
   body {
-    background-color: rgb(137, 145, 151);
+    background-color: #fefefe;
     color: #fefefe;
   }
   #app {
