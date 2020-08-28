@@ -3,33 +3,33 @@
     id="app"
     class="app">
 
-    <app-header
-      :user-name="user.username"
-      @changeUserName="user.username = 'new name'"
-    />
+    <app-header/>
 
     <main>
-      <tab-content></tab-content>
+      <transition
+        name="fade"
+        mode="out-in"
+      >
+        <router-view/>
+      </transition>
     </main>
 
-    <app-footer>
-
-    </app-footer>
+    <app-footer/>
   </div>
 </template>
 
 <script>
   import Header from '@/components/header/Header.vue'
   import Footer from '@/components/footer/Footer.vue'
-  import TabContent from '@/components/content/TabContent.vue'
+  import { store } from './store/store'
 
   export default {
     name: 'App',
     components: {
       'app-header' : Header,
       'app-footer' : Footer,
-      'tab-content' : TabContent,
     },
+    store,
     data () {
       return {
         user: {
@@ -57,4 +57,15 @@
     border: 1px solid #fefefe;
     text-align: center;
   }
+  .fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
 </style>

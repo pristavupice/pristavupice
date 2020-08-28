@@ -1,39 +1,30 @@
 <template>
     <div>
-        <header>
+        <header class="header-style">
             <img id ="panorama" class ="panorama" src="@/assets/pristav-panorama2.jpg"/>
+            <br/>
+            <header-nav-bar/>
         </header>
-
-        <!-- {{userName}} -->
-
-        <!-- <button @click='changeUserName()'>Change UserName</button> -->
     </div>
 </template>
 
 <script>
+  import HeaderNavBar from './HeaderNavBar.vue'
 
   export default {
-
-    props: {
-      userName: String
-    },
-
-    methods: {
-      changeUserName () {
-        this.$emit('changeUserName')
-      }
-    },
-
-    mounted () {
-      console.log(this.$store.state.user.username);
+    components: {
+      HeaderNavBar,
     },
   }
 
-  
 </script>
 
 <style>
   .panorama {
     width: 100%;
+  }
+  
+  .header-style {
+    text-align: center;
   }
 </style>
