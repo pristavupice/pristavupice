@@ -1,11 +1,8 @@
 <template>
   <div style="background-color:#D3D3D3">
     <h1 style="text-align:center; font-size: xx-large; font-family: Courier; padding: 10px 0px 10px 0px; color:#593C1F">
-      Vítejte na stránkách Přístavu Úpice
+      To je Uvod
     </h1>
-
-    
-
     <div>
       <p class="leftblock">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce nibh. 
@@ -20,10 +17,6 @@
         vulputate, erat libero tristique tellus, nec bibendum odio risus sit amet ante.
       </p>
       <img id ="kavaPristav" style="float:right; height: 15%; width:15%; padding: 2em 3em 0em 1em;" src="@/assets/kavovnikPristav.png"/>
-      <div style="color: black">
-        <p> Chosen tab is {{ $store.getters.activeTab }}</p>
-    </div>
-    
     </div>
 
     <div>

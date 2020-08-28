@@ -1,7 +1,7 @@
 <template>
   <div style="background-color:#D3D3D3">
     <h1 style="text-align:center; font-size: xx-large; font-family: Courier; padding: 10px 0px 10px 0px; color:#593C1F">
-      Vítejte na stránkách Přístavu Úpice
+      Kontakty
     </h1>
 
     
@@ -19,11 +19,7 @@
         Fusce consectetuer risus a nunc. Nulla pulvinar eleifend sem. Nullam feugiat, turpis at pulvinar 
         vulputate, erat libero tristique tellus, nec bibendum odio risus sit amet ante.
       </p>
-      <img id ="kavaPristav" style="float:right; height: 15%; width:15%; padding: 2em 3em 0em 1em;" src="@/assets/kavovnikPristav.png"/>
-      <div style="color: black">
-        <p> Chosen tab is {{ $store.getters.activeTab }}</p>
-    </div>
-    
+      <img id ="kavaPristav" style="float:right; height: 15%; width:15%; padding: 2em 3em 0em 1em;" src="@/assets/kavovnikPristav.png"/>    
     </div>
 
     <div>
